@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Valijonov Muhammadaziz</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+
+<div class="loader-content">
+
+<h1 class="loader-logo">VM</h1>
+
+<div class="loader-bar">
+<div class="loader-progress"></div>
+</div>
+
+<p class="loader-text">Initializing Portfolio...</p>
+
+</div>
+
+</div>
+
+
+
+<div class="light-bg"></div>
+<div id="particles-js"></div>
+
+
+
+<header>
+
+<h1 class="logo">VM</h1>
+
+<nav>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<button id="themeToggle">🌙</button>
+<button id="loginBtn" class="btn-small">Login</button>
+
+<div id="profileMenu" class="profile-menu" style="display:none">
+
+<img id="profileIcon" src="" class="avatar">
+
+<div id="dropdown" class="dropdown">
+<a href="#">Profile</a>
+<a href="#">Dashboard</a>
+<a id="logoutBtn">Logout</a>
+</div>
+
+</div>
+</div>
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Valijonov Muhammadaziz</h2>
+
+<p>AI Builder • Developer • Creator</p>
+
+<button class="btn" onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
+
+<div id="three-container"></div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-container">
+
+<div class="project-panel">
+<h3>AI Content Generator</h3>
+<p>Experimenting with AI prompts to generate viral content ideas.</p>
+</div>
+
+<div class="project-panel">
+<h3>Voice Automation Assistant</h3>
+<p>Python voice assistant that can open apps and automate tasks.</p>
+</div>
+
+<div class="project-panel">
+<h3>3D Interactive Experiments</h3>
+<p>Experiments with Three.js and interactive web graphics.</p>
+</div>
+
+<div class="project-panel">
+<h3>Roblox Cinema Simulator</h3>
+<p>A concept game where players build and manage their own cinema.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="section">
+
+<h2 class="section-title">Skills</h2>
+
+<div id="skills-3d"></div>
+
+<div class="skills-grid">
+
+<div class="skill">Python</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Three.js</div>
+<div class="skill">AI Tools</div>
+<div class="skill">Roblox Studio</div>
+<div class="skill">Automation</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT + CONTACT -->
+
+<section id="about" class="section">
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h2>About Me</h2>
+
+<p>
+I am a 17-year-old developer from Uzbekistan focused on AI tools, automation and creative projects.
+I enjoy building experimental products and exploring new technologies.
+</p>
+
+</div>
+
+
+
+<div class="info-card" id="contact">
+
+<h2>Contact</h2>
+
+<form id="contact-form" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+
+<p id="form-status"></p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Valijonov Muhammadaziz</p>
+
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div id="authModal" class="auth-modal">
+
+<div class="auth-box">
+
+<span id="closeAuth">✖</span>
+
+<h2 id="authTitle">Login</h2>
+
+<input id="email" type="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button id="loginSubmit" class="btn">Login</button>
+
+<button id="googleLogin" class="btn">Continue with Google</button>
+
+<p id="switchText" style="font-size:14px">
+Don't have an account?
+<span id="openRegister" style="color:#4f9cff;cursor:pointer">Register</span>
+</p>
+
+<p id="authStatus"></p>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
